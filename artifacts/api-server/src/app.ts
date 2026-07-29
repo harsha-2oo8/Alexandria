@@ -52,7 +52,7 @@ app.use(
 
 app.use("/api", router);
 
-app.get("/{*path}", (_req, res) => {
+app.use((_req, res) => {
   res.sendFile(path.join(frontendDist, "index.html"));
 });
 
