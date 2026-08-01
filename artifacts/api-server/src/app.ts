@@ -12,6 +12,8 @@ const __dirname = path.dirname(__filename);
 
 const app: Express = express();
 
+app.set("trust proxy", 1);
+
 const frontendDist = path.resolve(__dirname, "../../library-app/dist/public");
 app.use(express.static(frontendDist));
 
